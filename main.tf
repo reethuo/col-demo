@@ -1,6 +1,6 @@
 provider "google" {
   zone = var.region
-  project = "sam-453310"
+  project = "static-epigram-458808-h4"
 }
 
 resource "google_container_cluster" "primary" {
