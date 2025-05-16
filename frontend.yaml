@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app1
-          image: reethu2/sample1:latest
+          image: reethu2/sample2:latest
           ports:
             - containerPort: 80  # Fixed key name
 
