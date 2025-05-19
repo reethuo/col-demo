@@ -8,5 +8,5 @@ spec:
   backends:
     - service: frontend-service
       weight: 80   # 80% of traffic to deploy1-service
-    - service: deploy2-service
+    - service: frontend0-service
       weight: 20   # 20% of traffic to deploy2-service
