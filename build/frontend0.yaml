@@ -1,1 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app0
+  labels:
+    app: frontend0
+spec:
+  replicas: 3  # Fixed typo
+  selector:
+    matchLabels:
+      app: frontend0
+  template:
+    metadata:
+      labels:
+        app: frontend0
+    spec:
+      containers:
+        - name: app0
+          image: reethu2/sample4:latest
+          ports:
+            - containerPort: 80  # Fixed key name
 
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend0-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend0
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
